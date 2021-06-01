@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calendar</title>
+        <link href="{% static 'newyear/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Now: {{ date }}</h1>
+        <h2>It is {{ season }} time</h2>
+        {% if night %}
+            <h2>Time to sleep. Good night!</h2>
+        {% else %}
+            <h2>Have a nice day!</h2>
+        {% endif %}
+    </body>
+</html>
